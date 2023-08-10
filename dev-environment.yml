@@ -1,0 +1,24 @@
+name: dev-hedy
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy~=1.22
+  - pip~=22.0
+  - pythonocc-core~=7.5
+  - occt~=7.5  # freetype and ffmpeg are removed in the docker container
+  - pip:
+      - fastapi~=0.75
+      - uvicorn[standard]~=0.17
+      - pint~=0.18
+      - shapely~=1.8
+      - packaging~=21.3
+      - texttable~=1.6
+      # test and coverage suite
+      - pytest
+      - coverage
+      - requests
+      # only used if visualizations of the component classification are desired. Not recommended for production environment.
+      - bokeh
+
+
